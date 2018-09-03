@@ -11,6 +11,8 @@
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -18,8 +20,6 @@ Route::get('/', function () {
 Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 
 Route::get('/kyc', 'kycController@index')->name('kyc');
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
